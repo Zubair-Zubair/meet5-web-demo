@@ -1,0 +1,41 @@
+<mat-card class="activity-card">
+
+  <mat-card-header>
+    <mat-card-title>{{ activity.title }}</mat-card-title>
+    <mat-card-subtitle>{{ activity.date }} • {{ activity.time }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <!-- Location -->
+    <p class="location">
+      <mat-icon>location_on</mat-icon>
+      {{ activity.location }}
+    </p>
+
+    <!-- Participant photo grid -->
+    <div class="participants-grid">
+      <!-- Joined users -->
+      <ng-container *ngFor="let user of activity.participants">
+        <img
+          class="participant-img"
+          [src]="user.avatar ? user.avatar : defaultAvatar"
+          [alt]="user.name"
+          matTooltip="{{ user.name }}">
+      </ng-container>
+
+      <!-- Empty slots using default image -->
+      <ng-container *ngFor="let empty of emptySlots()">
+        <img
+          class="participant-img"
+          [src]="defaultAvatar"
+          alt="Empty slot">
+      </ng-container>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary">Join</button>
+  </mat-card-actions>
+
+</mat-card>

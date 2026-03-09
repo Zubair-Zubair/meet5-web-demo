@@ -1,0 +1,17 @@
+.activities-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .activities-grid {
+    grid-template-columns: 1fr; /* responsive: 1 card per row on smaller screens */
+  }
+}
