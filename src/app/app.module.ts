@@ -15,7 +15,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatMenuModule } from '@angular/material/menu'; 
+import { MatMenuModule } from '@angular/material/menu';
 
 import { PromoSliderComponent } from './components/shared/components/promo-slider/promo-slider.component';
 import { LayoutComponent } from './components/layout/layout.component';
@@ -31,16 +31,15 @@ import { LayoutComponent } from './components/layout/layout.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
     MatButtonModule,
     MatCardModule,
-        MatToolbarModule,
-        MatTooltipModule,
-         MatMenuModule
+    MatToolbarModule,
+    MatTooltipModule,
+    MatMenuModule
 
   ],
   providers: [],

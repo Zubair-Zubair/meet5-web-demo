@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Activity } from '../core/models/activity.model';
+import { Activity } from '../models/activity.model';
 
 @Injectable({
   providedIn: 'root'
