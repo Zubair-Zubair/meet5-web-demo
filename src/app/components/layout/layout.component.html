@@ -1,0 +1,90 @@
+<mat-sidenav-container class="app-container">
+
+  <!-- Sidebar -->
+  <mat-sidenav #sidenav mode="side" opened>
+
+    <!-- Sidebar Logo -->
+    <div class="sidebar-logo">
+      <img src="assets/profile.png" alt="Meet5 Logo">
+    </div>
+
+    <!-- Navigation Links -->
+    <mat-nav-list>
+      <a mat-list-item routerLink="/activities">
+        <mat-icon>event</mat-icon>
+        Activities
+      </a>
+      <a mat-list-item routerLink="/for-me">
+        <mat-icon>person</mat-icon>
+        For Me
+      </a>
+      <a mat-list-item routerLink="/discover">
+        <mat-icon>explore</mat-icon>
+        Discover
+      </a>
+      <a mat-list-item routerLink="/chats">
+        <mat-icon>chat</mat-icon>
+        Chats
+      </a>
+      <a mat-list-item routerLink="/profile">
+        <mat-icon>account_circle</mat-icon>
+        Profile
+      </a>
+    </mat-nav-list>
+
+    <!-- Spacer pushes logout to bottom -->
+    <div class="sidebar-spacer"></div>
+
+    <!-- Logout Button -->
+    <mat-nav-list>
+      <a mat-list-item (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        Logout
+      </a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <!-- Main Content -->
+  <mat-sidenav-content>
+
+    <!-- Top Toolbar -->
+    <mat-toolbar color="primary" class="top-toolbar">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Meet5 Logo" class="top-logo">
+        <span class="app-title">Meet5 Web</span>
+      </div>
+
+      <span class="toolbar-spacer"></span>
+
+      <button mat-button class="profile-btn" [matMenuTriggerFor]="profileMenu">
+        <img src="assets/profile.png" alt="Profile" class="profile-pic">
+      </button>
+      <mat-menu #profileMenu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>person</mat-icon>
+          Profile
+        </button>
+        <button mat-menu-item>
+          <mat-icon>settings</mat-icon>
+          Settings
+        </button>
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+          Logout
+        </button>
+      </mat-menu>
+    </mat-toolbar>
+
+    <!-- Page Content -->
+    <div class="page-content">
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

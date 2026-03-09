@@ -43,6 +43,21 @@ export class ActivityService {
 
         ],
         maxParticipants: 7
+      },
+      {
+        id: 3,
+        title: "Casino Meetup",
+        date: "March 25",
+        time: "11:00 PM",
+        location: "Aalen Center",
+        participants: [
+          { id: 1, name: "Bob", avatar: "assets/avatars/bob.jpg" },
+          { id: 2, name: "Charlie", avatar: "assets/avatars/charlie.jpg" },
+          { id: 3, name: "Alice", avatar: "assets/avatars/alice.jpg" }
+
+
+        ],
+        maxParticipants: 10
       }
     ];
 

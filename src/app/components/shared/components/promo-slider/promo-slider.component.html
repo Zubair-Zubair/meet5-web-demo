@@ -1,0 +1,25 @@
+<div class="slider">
+
+  <div class="slides" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+
+    <div class="slide" *ngFor="let slide of slides">
+
+      <img [src]="slide.image" />
+
+      <div class="slide-content">
+        <h2>{{ slide.title }}</h2>
+        <p>{{ slide.description }}</p>
+
+        <button mat-raised-button color="accent">
+          {{ slide.button }}
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <button class="nav prev" (click)="prev()">❮</button>
+  <button class="nav next" (click)="next()">❯</button>
+
+</div>

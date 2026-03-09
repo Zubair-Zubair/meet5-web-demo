@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Activity } from '../../../core/models/activity.model';
+import { Activity } from 'src/app/core/models/activity.model'; 
 
 @Component({
   selector: 'app-activity-card',
@@ -9,7 +9,7 @@ import { Activity } from '../../../core/models/activity.model';
 export class ActivityCardComponent {
   @Input() activity!: Activity;
 
-defaultAvatar = 'assets/avatars/default-avatar.png'; // make sure this file exists
+defaultAvatar = 'assets/avatars/default-avatar.png'; 
   emptySlots(): undefined[] {
     const emptyCount = this.activity.maxParticipants - this.activity.participants.length;
     return Array(emptyCount);

@@ -6,12 +6,12 @@
 
 .activities-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 20px;
 }
 
 @media (max-width: 900px) {
   .activities-grid {
-    grid-template-columns: 1fr; /* responsive: 1 card per row on smaller screens */
+    grid-template-columns: 1fr; 
   }
 }
